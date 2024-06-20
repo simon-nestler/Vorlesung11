@@ -1,4 +1,4 @@
-public class Person {
+public class Person implements Cloneable {
     private int age;
     private String name;
 
@@ -11,8 +11,9 @@ public class Person {
         this.age = age;
     }
 
-    public Person erzeugeEinenKlon() {
-        return new Person(this.age, this.name);
+    public Person erzeugeEinenKlon() throws CloneNotSupportedException {
+        Person neu = (Person) this.clone();
+        return neu;
     }
 
     public String toString() {
