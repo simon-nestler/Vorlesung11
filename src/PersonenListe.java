@@ -21,12 +21,8 @@ public class PersonenListe implements Cloneable {
 
     @Override
     public PersonenListe clone() {
-        try {
-            return (PersonenListe) super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-            return null;
-        }
+        return new PersonenListe(erstePerson.clone(),
+                zweitePerson.clone(), drittePerson.clone());
     }
 
     public String toString() {

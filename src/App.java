@@ -1,5 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        test();
+    }
+
+    public static void test2() {
         PersonenListe liste = new PersonenListe(
                 new Person(25, "Max"),
                 new Person(22, "Lisa"),
@@ -13,7 +17,7 @@ public class App {
         System.out.println(listeKopie);
     }
 
-    public void test() {
+    public static void test() {
         Person max = new Person(25, "Max");
         Person lisa = new Person(23, "Lisa");
 
@@ -21,6 +25,7 @@ public class App {
         Person lisaKopie = lisa; // Referenzkopie
 
         max.setAge(26);
+        max.setName("Lukas");
         lisa.setAge(24);
 
         System.out.println(max);

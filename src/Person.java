@@ -7,6 +7,10 @@ public class Person implements Cloneable {
         this.name = name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
