@@ -11,6 +11,10 @@ public class Person implements Cloneable {
         this.age = age;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     @Override
     public Person clone() {
         try {
