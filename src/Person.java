@@ -11,9 +11,14 @@ public class Person implements Cloneable {
         this.age = age;
     }
 
-    public Person erzeugeEinenKlon() throws CloneNotSupportedException {
-        Person neu = (Person) this.clone();
-        return neu;
+    @Override
+    public Person clone() {
+        try {
+            return (Person) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public String toString() {
